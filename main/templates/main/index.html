@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>보드게임 순위</title>
 </head>
 <body>
-    장고 첫페이지!
+    <h1>보드라이프 보드게임 순위</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th>게임명</th>
+                <th>링크</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in games %}
+            <tr>
+                <td>{{ game.rank }}</td>
+                <td>{{ game.title }}</td>
+                <td><a href="{{ game.url }}" target="_blank">보기</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

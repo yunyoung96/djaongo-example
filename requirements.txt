@@ -1,2 +1,4 @@
 Django==5.2.1
 setuptools
+requests
+beautifulsoup4
